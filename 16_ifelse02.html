@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>단일선택 IF</title>
+    </head>
+<body>
+    <script>
+        var price, tax, duty, vat, special; 
+        special = 0; 
+        price = parseInt(prompt("핸드백 가격(원)은? "));
+        vat = price * 0.1; 
+        if(price <= 2000000) { //물품가격이 200만원 이하일 경우 
+            duty = price * 0.07; 
+        } else { //물품가격이 200만원 초과할 경우 
+            duty = price * 0.08; special = price * 0.2; 
+            } tax = duty + vat + special; //총세금 = 관세 + 부가세 + 특소세 
+        pay = price + tax; //총금액 = 물품가격 + 총세금 
+        document.write("핸드백 : " +price +"원<br><br>"); 
+        document.write("관세: " +duty +"원<br>"); 
+        document.write("부가세 : " +vat +"원<br>"); 
+        document.write("특소세 : " +special +"원<br>"); 
+        document.write("--------------------------<br>"); 
+        document.write("총세금 : " +tax +"원<br><br>"); 
+        document.write("총금액 : " +pay +"원<br>")
+        </script>
+</body>
+</html>

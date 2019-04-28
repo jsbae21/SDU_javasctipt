@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>단일선택 IF</title>
+    </head>
+<body>
+    <script>
+        var height, weight, std_Weight, bmi; // 체중 60kg 이상자만 구하기
+         height = parseInt(prompt("당신의 신장(Cm)은? ")); // 신장입력 
+         weight = parseInt(prompt("당신의 체중(Kg)은? ")); // 체중입력 
+         if (weight >= 60) { // 체중이 60 이상 이라면 
+            std_Weight = (height - 100) * 0.9; // 표준체중 계산 
+            bmi = ((weight - std_Weight) / std_Weight) * 100; // 비만도 계산 
+            document.write("신장 : " +height +"(Cm)<br>"); 
+            document.write("체중 : " +weight +"(Kg)<br>"); 
+            document.write("--------------------------<br>"); 
+            document.write("표준체중 : " +std_Weight +"(Kg)<br>"); 
+            document.write("비만도 : " +bmi +"(%)<br>"); }
+        </script>
+</body>
+</html>

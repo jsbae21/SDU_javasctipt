@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>단일선택 IF</title>
+    </head>
+<body>
+    <script>
+        var score; 
+        score = parseInt(prompt("과목의 점수를 입력하시오.")); 
+        
+        if(score >= 90){
+            grade = "A";
+        }else if(score >= 80){
+            grade = "B";
+        }else if(score >= 70){
+            grade = "C";
+        }else if(score >= 60){
+            grade = "D";
+        }else {
+            grade = "F";
+        }
+
+        document.write("점수 : " + score +"<br>");
+        document.write("등급 : " + grade +"<br>");
+    </script>     
+      
+</body>
+</html>

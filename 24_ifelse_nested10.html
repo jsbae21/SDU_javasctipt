@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>단일선택 IF</title>
+    </head>
+<body>
+    <script>
+        var code, income, position, tax, pay; 
+        code = parseInt(prompt("직급 코드(1:과장, 2:차장, 3:부장)"));
+        income = parseInt(prompt("총 소득(원) :")); 
+        /*
+        if(code == 1){
+            position = "과장";
+            tax = income*0.08;
+            pay = income - tax;
+        }
+        if(code == 2){
+            position = "차장";
+            tax = income*0.12;
+            pay = income - tax;
+        }
+        if (code == 3){
+            position = "부장";
+            tax = income*0.18;
+            pay = income - tax;
+        }
+        */
+        switch(code) { 
+            case 1: position = "과장"; 
+            tax = income * 0.08; break; // switch~case문을 벗어남
+            case 2: position = "차장"; 
+            tax = income * 0.12; break; // switch~case문을 벗어남
+            case 3: position = "부장"; 
+            tax = income * 0.18; 
+            } 
+            pay = income - tax; //실 수령액 (총소득 – 세금) 연산 
+        document.write("직급 : " + position +"<br>");
+        document.write("총 소득 : " + income +"<br>");
+        document.write("세급 : " + tax +"<br>");
+        document.write("실 수령액 : " + pay +"<br>");
+    </script>     
+      
+</body>
+</html>

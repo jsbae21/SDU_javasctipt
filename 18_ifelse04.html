@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>단일선택 IF</title>
+    </head>
+<body>
+    <script>
+        var distance, basicFee, basicDis, overPay, taxiPay; 
+        basicFee = 4800; // 기본요금 
+        basicDis = 2000; // 기본거리 
+        distance = parseInt(prompt("주행거리(미터)를 입력하세요")); 
+        if(distance <= basicDis) { // if(주행거리 <= 2000) 라면 
+            overPay = 0; // 추가요금 = 0 
+        } else { 
+            overPay = parseInt((distance - basicDis) / 180) * 100; 
+        } 
+        taxiPay = basicFee + overPay; // 택시요금 = 기본요금 + 추가요금 
+        document.write("주행거리 : " +distance +"미터<BR>"); 
+            document.write("기본요금 : " +basicFee +"원<BR>"); 
+                document.write("추가요금 : " +overPay +"원<BR>");
+                    document.write("택시요금 : " +taxiPay +"원<BR>");
+        </script>
+</body>
+</html>

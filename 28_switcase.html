@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>단일선택 IF</title>
+    </head>
+<body>
+    <script>
+      var num1, num2, opr; 
+      num1 = parseInt(prompt("첫번째 정수를 입력 : ")); 
+      num2 = parseInt(prompt("두번째 정수를 입력 : ")); 
+      opr = prompt("연산자(+, -, *, /) 입력 : "); 
+      switch(opr) { 
+         case "+": 
+           document.write(num1 +" + " +num2 +" = " +(num1+num2)); 
+           break 
+         case "-": 
+           document.write(num1 +" - " +num2 +" = " +(num1-num2)); 
+           break; 
+         case "*": 
+           document.write(num1 +" * " +num2 +" = " +(num1*num2)); 
+           break; 
+         case "/": 
+           document.write(num1 +" / " +num2 +" = " +(num1/num2)); 
+           break;
+         default: 
+           document.write("Error : Unknown Operator"); }
+    </script>       
+</body>
+</html>

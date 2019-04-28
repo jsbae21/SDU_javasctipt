@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>단일선택 IF</title>
+    </head>
+<body>
+    <script>
+        var attend, midterm, finals, total; 
+        attend = parseInt(prompt("출석점수(<=20) 입력? ")); // 출석점수입력 
+        midterm = parseInt(prompt("중간점수(<=40) 입력? ")); // 중간점수입력 
+        finals = parseInt(prompt("기말점수(<=40) 입력? ")); // 기말점수입력 
+        if(attend >= 9) { // 출석점수가 9이상이라면 블록 안의 문장들을 수행 
+            total = attend + midterm + finals; // 출석, 중간, 기말 점수 합계 계산 
+            document.write("출석 : " +attend +"<br>"); 
+            document.write("중간 : " +midterm +"<br>"); 
+            document.write("기말 : " +finals +"<br>"); 
+            document.write("합계 : " +total +"<br>"); // 합계 출력 } 
+            document.write("감사합니다.<br>");}
+        </script>
+</body>
+</html>
