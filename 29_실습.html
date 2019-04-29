@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>javascript</title>
+    </head>
+    <body>
+            이름, 체중(Kg), 신장(Cm)을 입력 받아 체질량지수(BMI)와 판정 결과를 출력 <br>
+            판정결과 체질량지수 
+            <li>18.5미만 ‘저체중’</li>
+            <li>18.5~23 ‘표준체중’</li>
+            <li>23초과 ‘과체중’</li>
+            <br><br>
+            <script>
+            var name, weight, height, BMI, result;
+            //name = parseInt(prompt("이름을 입력하시오 : "));
+            weight = parseInt(prompt("체중(kg)을 입력하시오 : "));
+            height = parseInt(prompt("신장(cm)을 입력하시오 : "));
+            BMI = weight / Math.pow((height/100), 2); // Math.pow(2,3) : 정수 2를 3회 거듭제곱  
+
+            if (BMI < 18.5){
+             result = "저체중";
+            }else if (BMI <= 23){
+             result = "표준체중";
+            }else{
+             result = "과체중";
+            }    
+
+            document.write("체질량지수(BMI): " + BMI + "<br>");
+            document.write("결과: " + result);
+            </script>
+        
+    </body>
+</html>

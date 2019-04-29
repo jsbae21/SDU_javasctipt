@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>javascript</title>
+    </head>
+    <body>
+        <h1>스포츠 센터</h1>
+        <table>
+            <tr>
+                <td>레벨</td><td>수강반</td><td>인하율</td>
+            </tr>
+            <tr>
+                <td>1</td><td>물개반</td><td>3%</td>
+            </tr>
+            <tr>
+                <td>2</td><td>돌고래반</td><td>5%</td>
+            </tr>
+            <tr>
+                <td>3</td><td>상어반</td><td>7%</td>
+            </tr>
+        </table>
+        * 지역주민 10,000원 할인 <br><br>
+
+        <script>
+        var level, local, group, tuition, discount, total;
+        //discount = 0;
+        tuition = 80000;
+        level = parseInt(prompt("레벨을 입력하시오(1 ~ 3) : "));
+        local = (prompt("지역주민 입니까(Y/N)? : "));
+
+        if (level == 1){
+            group = "물개반";
+            discount = tuition * 0.3;
+        }
+        else if (level == 2){
+            group = "돌고래반";
+            discount = tuition * 0.5;
+        }
+        else {
+            group = "상어반";
+            discount = tuition * 0.7;
+        } 
+        if (local == "Y" || local =="y"){
+            discount = discount + 10000;
+        }
+       
+        total = tuition - discount;
+        document.write("지역주민 : " +local.toUpperCase() +"<BR>");
+        document.write("수강반 : " +group +"<BR>");
+        document.write("할인금액 : " +discount +"원<BR>");
+        document.write("결제금액 : " +total +"원<BR>");
+        </script>
+    </body>
+</html>

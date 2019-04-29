@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>javascript</title>
+    </head>
+    <body>
+        <script>
+            var code, hour, overPay, overTime, position, beforeTax, tax, pay;
+            code = parseInt(prompt("직급코드(1~3) 입력 : "));
+            hour = parseInt(prompt("근무시간 입력 : "));
+            overPay = 0;
+            overTime = hour - 40; // 초과 근무시간
+            if(overTime > 0) { // 40시간 초과시간에 대하여
+                switch(code) { // 직급별 초과수당 계산
+                 case 1:
+                    overPay = overTime * (10000 * 0.5);
+                    break;
+                case 2:
+                    overPay = overTime * (15000 * 0.5);
+                    break;
+                case 3:
+                    overPay = overTime * (18000 * 0.5);
+            }
+            }
+            // 총급여 = 기본급 + (근무시간 * 시간당급여) + 초과수당
+            switch(code) { // 직급에 따른 총급여 계산
+                case 1:
+                    position = "과장";
+                    beforeTax = 1500000 + (hour * 10000) + overPay;
+                    break;
+                case 2:
+                    position = "차장";
+                    beforeTax = 1800000 + (hour * 15000) + overPay;
+                    break;
+                case 3:
+                    position = "부장";
+                    beforeTax = 2000000 + (hour * 18000) + overPay;
+            }
+            if(beforeTax > 4000000) { // 총급여에 따라 세금 계산
+                tax = beforeTax * 0.15;
+            } else if(beforeTax >= 2000000) {
+                tax = beforeTax * 0.11;
+            } else {
+                tax = beforeTax * 0.08;
+            }
+            pay = beforeTax - tax; // 실수령액 = 총급여 - 세금
+            document.write("직급 : " +position +"<BR>");
+            document.write("근무시간 : " +hour +"시간<BR>");
+            document.write("초과수당 : " +overPay +"원<BR>");
+            document.write("총급여 : " +beforeTax +"원<BR>");
+            document.write("세금 : " +tax +"원<BR>");
+            document.write("실수령액 : " +pay +"원<BR>");
+        </script>   
+    </body>
+</html>
