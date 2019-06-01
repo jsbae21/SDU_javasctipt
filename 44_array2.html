@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset = "utf-8">
+            <title>배열</title>
+    </head>
+    <body>
+        <script>
+            var mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]; 
+            var n;
+            do{
+                n=parseInt(prompt("달(1~12)을 입력하시오",""));
+            }while(n<1 || n>12); //1 ~ 12외 다른 값이 입력되면 다시 입력 받음
+            document.write(n + "월은" + mon[n-1] + "입니다.<br>");
+        </script>
+    </body>
+</html>
