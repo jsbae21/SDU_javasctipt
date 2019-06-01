@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>for문</title>
+    </head>
+    <body>
+        <script>
+            var i, min, max, temp, sum;
+            sum = 0;
+            min = parseInt(prompt("첫번째 정수 : "));
+            max = parseInt(prompt("두번째 정수 : "));
+            document.write(min + "부터" + max + "까지의 합은");
+            if(min>max){
+                temp = min;
+                min = max;
+                max = temp;
+            }
+            for(i=min; i<=max; i++){
+                sum = sum +i;
+            }
+            document.write(sum +"입니다");
+        </script>
+            
+    </body>
+</html>
