@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>파일</title>
+        <script type="text/javascript">
+        function fileinfo()
+        {
+            var file = document.getElementById("file").files[0];
+            
+            document.getElementById("table").innerHTML =
+                "<tr><td> 파일이름 </td><td>" + file.name + "</td></tr>";
+            document.getElementById("table").innerHTML +=
+                "<tr><td> 파일크기 </td><td>" + file.size + "</td></tr>";
+            document.getElementById("table").innerHTML +=
+                "<tr><td> 파일타입 </td><td>" + file.type + "</td></tr>";
+            document.getElementById("table").innerHTML +=
+                "<tr><td> 파일 수정 날짜 </td><td>" + file.lastModifiedDate + "</td></tr>";    
+        }
+        </script>
+    </head>
+    <body>
+        <input type="file" id="file">
+        <input type="button" onclick="fileinfo()" value="파일정보확인"><br>
+        <table id="table"></table>
+    </body>
+</html>
